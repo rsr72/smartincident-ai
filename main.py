@@ -4,6 +4,7 @@ import openai
 import os
 from dotenv import load_dotenv
 
+
 # Load environment variables from .env file
 load_dotenv()
 
@@ -13,9 +14,11 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 # Initialize FastAPI app
 app = FastAPI()
 
+
 # Request body schema
 class LogInput(BaseModel):
     log_text: str
+
 
 # POST endpoint to analyze logs
 @app.post("/analyze")
@@ -29,7 +32,10 @@ async def analyze_log(data: LogInput):
             messages=[
                 {
                     "role": "system",
-                    "content": "You are an expert incident responder. Analyze logs and suggest possible root causes and next steps."
+                    "content": (
+                        "You are an expert incident responder. Analyze logs and suggest "
+                        "possible root causes and next steps."
+                    )
                 },
                 {
                     "role": "user",
