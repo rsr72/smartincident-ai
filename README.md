@@ -1,8 +1,6 @@
 # SmartIncident-AI
 
-An AI-powered incident assistant that summarizes logs, identifies root causes, and suggests fixes using OpenAI's GPT-4 API.
-
----
+An AI-powered incident assistant that summarizes logs, identifies root causes, and suggests fixes using OpenAI's GPT-3.5 or GPT-4 API.
 
 ## 🚀 Features
 
@@ -11,6 +9,7 @@ An AI-powered incident assistant that summarizes logs, identifies root causes, a
 - Designed for cloud-native deployment (AWS Lambda or Azure Functions)
 - GitHub Actions for CI/CD automation
 - Modular structure with support for future Ansible integration and visualization
+
 
 ---
 
